@@ -5,7 +5,10 @@ spring:
  application:
   name: ms-inventory-products
  datasource:
-  url: jdbc:h2:mem:testdb
+  url: jdbc:mysql://localhost:3306/spring
+  driverClassName : com.mysql.cj.jdbc.Driver
+  username: root
+  password :
  jpa:
   show-sql: true
  h2:
@@ -16,4 +19,8 @@ spring:
     web-allow-otrhers: true
 ## Configuración de Instancia
 server:
- port: 8088
+ port: 8080
+
+ logging:
+  level:
+    org.springframework: DEBUG
