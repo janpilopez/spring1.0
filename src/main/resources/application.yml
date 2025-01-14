@@ -8,7 +8,7 @@ spring:
   url: jdbc:mysql://localhost:3306/spring
   driverClassName : com.mysql.cj.jdbc.Driver
   username: root
-  password :
+  password : ""
  jpa:
   show-sql: true
  h2:
@@ -16,11 +16,11 @@ spring:
    enabled: true
    path: /h2-console
    settings:
-    web-allow-otrhers: true
+    web-allow-others: true
 ## Configuración de Instancia
 server:
  port: 8080
 
- logging:
-  level:
-    org.springframework: DEBUG
+#logging:
+#  level:
+#    org.springframework: DEBUG

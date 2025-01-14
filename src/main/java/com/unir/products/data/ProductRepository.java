@@ -16,6 +16,7 @@ import com.unir.products.model.pojo.Product;//Importa la clase Product, que es l
 public interface ProductRepository extends JpaRepository<Product, Long> {
 	//El tipo Product es la entidad que se gestionará, y Long es el tipo de la clave primaria.
 	List<Product> findByName(String name);
+	
 	//El método List<Product> findByName(String name); se declara para buscar productos por su nombre. Spring Data JPA generará automáticamente la implementación de este método basándose en su nombre.
 }
 

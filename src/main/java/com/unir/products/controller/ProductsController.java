@@ -1,5 +1,6 @@
 package com.unir.products.controller;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -32,15 +33,24 @@ public class ProductsController {
 	
 	private final ProductService service ;
 
-	public ProductsController(ProductService service) {
-		this.service = service;
-	}
+	//El constructor requiredargscontrollerl o genera, no es necesario
+	//public ProductsController(ProductService service) {
+	//	this.service = service;
+	//}
 	
 	@GetMapping("/products")
 	public ResponseEntity<List<Product>> getProducts(@RequestHeader Map<String, String> headers) {
 		//log.info("headers: {}",headers);
 		List<Product> products = service.getProducts();
-		System.out.print(products);
+		
+        //Product producto = new Product();
+        //producto.setName("Sample Product"); // Asignar el nombre
+        //producto.setCountry("USA"); // Asignar el país
+        //producto.setDescription("This is a sample product."); // Asignar la descripción
+        //producto.setVisible(true); // Asignar si está visible
+        
+        //List<Product> singleProductList = new ArrayList<>();
+        //singleProductList.add(products);
 		if (products != null) {
 			return ResponseEntity.ok(products);
 		} else {
