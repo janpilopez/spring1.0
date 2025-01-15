@@ -10,19 +10,19 @@ import com.unir.products.data.ProductRepository;
 import com.unir.products.model.pojo.Product;
 import com.unir.products.model.request.CreateProductRequest;
 
-@Service//Esta anotación le indica al contenedor de Spring de que esta clase es un bean
+//Esta anotación le indica al contenedor de Spring de que esta clase es un bean
 //del nivel de servicio Es decir, debe ser gestionada por su contenedor. Además,como no estamos especiﬁcando ningún tipo de scope, se usará el que viene por
 //omisión, singleton (al igual que con ProductRepository).
+@Service
 public class ProductServiceImpl implements ProductService {
 
     @Autowired
-    private ProductRepository repository;//Con esa dependencia le estamos indicando al contenedor de Spring
-    //que debe tratar de buscar un bean que implemente la interfaz ProductRepository y
-    //que, si lo encuentra, le asigne su valor a la variable repository.
+    private ProductRepository repository;//Con esa dependencia le estamos indicando al contenedor de Spring //que debe tratar de buscar un bean que implemente la interfaz ProductRepository y     //que, si lo encuentra, le asigne su valor a la variable repository.
 
     @Override
     public List<Product> getProducts() {
     List<Product> products = repository.findAll();
+    System.out.print(products);
         return products.isEmpty() ? null : products;
     }
 

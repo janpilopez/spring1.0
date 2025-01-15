@@ -1,14 +1,18 @@
 package com.unir.products.model.request;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
-@Setter
+//@Getter
+//@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
+@Builder
 
 //La clase CreateProductRequest está diseñada para representar el cuerpo de una petición HTTP que se envía al servidor al crear un nuevo producto. Cuando un cliente envía una solicitud (por ejemplo, un formulario en una aplicación web), el cuerpo de la solicitud puede estar en formato JSON. Spring utilizará esta clase para deserializar (convertir) el JSON en un objeto Java.
 public class CreateProductRequest {

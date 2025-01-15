@@ -1,5 +1,6 @@
 package com.unir.products.controller;
 
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -64,6 +65,7 @@ public class ProductsController {
         students.add("Maria");
         students.add("Pedro");
 
+
         // 3. Crear un JRBeanCollectionDataSource para pasar la lista al reporte
         JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(students);
 
@@ -82,7 +84,15 @@ public class ProductsController {
 	public ResponseEntity<List<Product>> getProducts(@RequestHeader Map<String, String> headers) {
 		//log.info("headers: {}",headers);
 		List<Product> products = service.getProducts();
-		System.out.print(products);
+		
+        //Product producto = new Product();
+        //producto.setName("Sample Product"); // Asignar el nombre
+        //producto.setCountry("USA"); // Asignar el país
+        //producto.setDescription("This is a sample product."); // Asignar la descripción
+        //producto.setVisible(true); // Asignar si está visible
+        
+        //List<Product> singleProductList = new ArrayList<>();
+        //singleProductList.add(products);
 		if (products != null) {
 			return ResponseEntity.ok(products);
 		} else {
