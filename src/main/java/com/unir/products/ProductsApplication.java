@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-//@ComponentScan({"com.util.jasper"})
+// @ComponentScan({"com.util.jasper"})
 public class ProductsApplication {
 
 	public static void main(String[] args) {

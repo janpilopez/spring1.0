@@ -19,7 +19,7 @@ spring:
     web-allow-others: true
 ## Configuración de Instancia
 server:
- port: 8080
+ port: 8081
 
 #logging:
 #  level:
